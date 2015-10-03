@@ -4,84 +4,71 @@ var expect = require('chai').expect;
 var plugin = require('../');
 
 var test = function(input, output, opts, done) {
-    postcss([plugin(opts)]).process(input).then(function(result) {
-        expect(result.css).to.eql(output);
-        done();
-    });
+  postcss([plugin(opts)]).process(input).then(function(result) {
+    expect(result.css).to.eql(output);
+    done();
+  });
 };
 
-describe('postcss-australian-stylesheets', function() {
+describe('postcss-singlish-stylesheets', function() {
 
-    // color to colour
-    it('converts colour to color', function(done) {
-        test('a{ colour: white; }', 'a{ color: white; }', {}, done);
-    });
+  // chope to clear
+  it('converts chope to clear', function(done) {
+    test('a{ chope: 100; }', 'a{ clear: 100; }', {}, done);
+  });
 
-    it('converts background-colour to color', function(done) {
-        test('a{ background-colour: white; }', 'a{ background-color: white; }', {}, done);
-    });
+  // WAH, SO FAT ALREADY AH! to thick
+  it('converts WAH, SO FAT ALREADY AH! to thick', function(done) {
+    test('a{ color: WAH, SO FAT ALREADY AH!; }', 'a{ color: thick; }', {}, done);
+  });
 
-    it('converts border-colour to color', function(done) {
-        test('a{ border-colour: white; }', 'a{ border-color: white; }', {}, done);
-    });
+  // water-wally to #47C5F1
+  it('converts water-wally to #47C5F1', function(done) {
+    test('a{ color: water-wally; }', 'a{ color: #47C5F1; }', {}, done);
+  });
 
-    // zed-index to z-index
-    it('converts zed-index to z-index', function(done) {
-        test('a{ zed-index: 100; }', 'a{ z-index: 100; }', {}, done);
-    });
+  // ice-kacang to -webkit-gradient( linear, left top, right top, color-stop(0, #0f0), color-stop(0.5, #fff), color-stop(1, #f00));
+  it('converts ice-kacang to -webkit-gradient( linear, left top, right top, color-stop(0, #0f0), color-stop(0.5, #fff), color-stop(1, #f00));', function(done) {
+    test('a{ color: ice-kacang; }', 'a{ color: -webkit-gradient( linear, left top, right top, color-stop(0, #0f0), color-stop(0.5, #fff), color-stop(1, #f00));; }', {}, done);
+  });
 
-    // centre to center
-    it('converts centre to center', function(done) {
-        test('a{ text-align: centre; }', 'a{ text-align: center; }', {}, done);
-    });
+  // singa-lion to #FEBB1F
+  it('converts singa-lion to #FEBB1F', function(done) {
+    test('a{ color: singa-lion; }', 'a{ color: #FEBB1F; }', {}, done);
+  });
 
-    // true-blue to #0581C1
-    it('converts true-blue to #0581C1', function(done) {
-        test('a{ color: true-blue; }', 'a{ color: #0581C1; }', {}, done);
-    });
+  // kopi to #91754D
+  it('converts kopi to #91754D', function(done) {
+    test('a{ color: kopi; }', 'a{ color: #91754D; }', {}, done);
+  });
 
-    // vegemite to #461B00
-    it('converts vegemite to #461B00', function(done) {
-        test('a{ color: vegemite; }', 'a{ color: #461B00; }', {}, done);
-    });
+  // durian to #FAC011
+  it('converts durian to #FAC011', function(done) {
+    test('a{ color: durian; }', 'a{ color: #FAC011; }', {}, done);
+  });
 
-    // vb-green to #2D8249
-    it('converts vb-green to #2D8249', function(done) {
-        test('a{ color: vb-green; }', 'a{ color: #2D8249; }', {}, done);
-    });
+  // cannot-lah to none
+  it('converts cannot-lah to none', function(done) {
+    test('a{ border: cannot-lah; }', 'a{ border: none; }', {}, done);
+  });
 
-    // kangaroo to #E6924A
-    it('converts kangaroo to #E6924A', function(done) {
-        test('a{ color: kangaroo; }', 'a{ color: #E6924A; }', {}, done);
-    });
+  // mah to border-box
+  it('converts mah to border-box', function(done) {
+    test('a{ box-sizing: mah; }', 'a{ box-sizing: border-box; }', {}, done);
+  });
 
-    // koala to #B6B7BC
-    it('converts koala to #B6B7BC', function(done) {
-        test('a{ color: koala; }', 'a{ color: #B6B7BC; }', {}, done);
-    });
+  // fly-kite to hidden
+  it('converts fly-kite to hidden', function(done) {
+    test('a{ visibility: fly-kite; }', 'a{ visibility: hidden; }', {}, done);
+  });
 
-    // yeah-nah to none
-    it('converts yeah-nah to none', function(done) {
-        test('a{ border: yeah-nah; }', 'a{ border: none; }', {}, done);
-    });
+  // kallang-wave to cubic-bezier(0, 1, 0, 1)
+  it('converts kallang-wave to cubic-bezier(0, 1, 0, 1)', function(done) {
+    test('a{ transition: all 1s kallang-wave; }', 'a{ transition: all 1s cubic-bezier(0, 1, 0, 1); }', {}, done);
+  });
 
-    // fair-dinkum to border-box
-    it('converts fair-dinkum to border-box', function(done) {
-        test('a{ box-sizing: fair-dinkum; }', 'a{ box-sizing: border-box; }', {}, done);
-    });
-
-    // rack-off to hidden
-    it('converts rack-off to hidden', function(done) {
-        test('a{ visibility: rack-off; }', 'a{ visibility: hidden; }', {}, done);
-    });
-
-    // woop-woop to -9999px
-    it('converts woop-woop to -9999px', function(done) {
-        test('a{ text-indent: woop-woop; }', 'a{ text-indent: -9999px; }', {}, done);
-    });
-
-    // !bloody-oath to !important
-    it('converts !bloody-oath to !important', function(done) {
-        test('a{ color: gray !bloody-oath; }', 'a{ color: gray !important; }', {}, done);
-    });
+  // !pai-seh to !important
+  it('converts !pai-seh to !important', function(done) {
+    test('a{ color: gray !pai-seh; }', 'a{ color: gray !important; }', {}, done);
+  });
 });

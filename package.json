@@ -1,13 +1,13 @@
 {
-    "name": "postcss-australian-stylesheets",
+    "name": "postcss-singlish-stylesheets",
     "version": "0.0.6",
-    "description": "PostCSS plugin for writing Australian Style Sheets",
-    "keywords": ["postcss", "css", "postcss-plugin", "australia", "australian", "australian-stylesheets"],
-    "author": "David Lewis <mail@david-lewis.com>",
+    "description": "PostCSS plugin for writing Singlish Style Sheets",
+    "keywords": ["postcss", "css", "postcss-plugin", "singapore", "singlish", "singlish-stylesheets"],
+    "author": "Lachlan Priest <lachlanpriest@gmail.com>",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url":  "https://github.com/dp-lewis/postcss-australian-stylesheets.git"
+        "url":  "https://github.com/lcpriest/postcss-singlish-stylesheets.git"
     },
     "dependencies": {
         "postcss": "^4.1.5"

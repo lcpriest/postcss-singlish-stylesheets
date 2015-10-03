@@ -1,35 +1,33 @@
-# PostCSS Australian Stylesheets [![Build Status][ci-img]][ci]
+# PostCSS Singlish Stylesheets [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin for writing Australian Stylesheets.
+[PostCSS] plugin for writing Singlish Stylesheets.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/dp-lewis/postcss-australian-stylesheets.svg
 [ci]:      https://travis-ci.org/dp-lewis/postcss-australian-stylesheets
 
-## Australian syntax
+## Singlish syntax
 ```css
 .foo {
-    border-colour: vb-green;
-    background-colour: vegemite;
-    box-sizing: fair-dinkum;
-    colour: true-blue !bloody-oath;
-    display: yeah-nah;
-    text-align: centre;
-    text-indent: woop-woop;
-    visibility: rack-off;
+    border-color: water-wally;
+    background-color: durian;
+    box-sizing: mah;
+    color: kopi !pai-seh;
+    display: cannot-lah;
+    transition: all 1s kallang-wave;
+    visibility: fly-kite;
 }
 ```
 
 ## CSS output
 ```css
 .foo {
-    border-color: #2D8249;
-    background-color: #461B00;
+    border-color: #47C5F1;
+    background-color: #FAC011;
     box-sizing: border-box;
-    color: #0581C1 !important;
+    color: #91754D !important;
     display: none;
-    text-align: center;
-    text-indent: -9999px;
+    transition: all 1s cubic-bezier(0, 1, 0, 1);
     visibility: hidden;
 }
 ```
@@ -37,19 +35,12 @@
 ## Usage
 
 ```js
-postcss([ require('postcss-australian-stylesheets') ])
+postcss([ require('postcss-singlish-stylesheets') ])
 ```
 
 See [PostCSS] docs for examples for your environment.
 
-## gulp
-
-Use [gulp-australian-stylesheets](https://github.com/stevemao/gulp-australian-stylesheets)
-
-## grunt
-
-Use [grunt-australian-stylesheets](https://github.com/stevemao/grunt-australian-stylesheets)
 
 ## Thanks to
 
-Inspiration from [Canadian Stylesheets](https://github.com/chancancode/postcss-canadian-stylesheets) and chats with [@darylljann](https://twitter.com/darylljann)
+Most of the code is from [Australian Stylesheets](https://github.com/dp-lewis/postcss-australian-stylesheets.git) by David Lewis
