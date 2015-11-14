@@ -1,6 +1,6 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-ass', function() {
+module.exports = postcss.plugin('postcss-singlish-stylesheets', function() {
   return function(css) {
 
     css.eachDecl(function transformDecl(decl) {
