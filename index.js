@@ -3,7 +3,7 @@ var postcss = require('postcss');
 module.exports = postcss.plugin('postcss-singlish-stylesheets', function() {
   return function(css) {
 
-    css.eachDecl(function transformDecl(decl) {
+    css.walkDecls(function transformDecl(decl) {
       decl.prop = decl.prop.replace('chope', 'clear');
       decl.value = decl.value.replace('WAH, SO FAT ALREADY AH!', 'thick');
       decl.value = decl.value.replace('water-wally', '#47C5F1');

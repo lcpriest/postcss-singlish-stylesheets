@@ -1,6 +1,6 @@
 {
     "name": "postcss-singlish-stylesheets",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "PostCSS plugin for writing Singlish Style Sheets",
     "keywords": ["postcss", "css", "postcss-plugin", "singapore", "singlish", "singlish-stylesheets"],
     "author": "Lachlan Priest <lachlanpriest@gmail.com>",
